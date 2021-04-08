@@ -1,13 +1,27 @@
 <template>
 
-  <header class="main" style="background-image: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdiiGei%2FbtqCn1hTTgs%2FURimITOQFns95kKz4AVNvk%2Fimg.jpg')">
+  <header class="main" >
     <div class="container menu-container">
         <div class ="logoWrap">
-            <a href="/">
+            <router-link to="/">
              <img src="../assets/white_logo.png" alt="allground logo"/>
-            </a>
+           </router-link>
         </div>
+
+
+        <nav class="m-d-none">
+            <ul>
+                <li> <router-link to="/about">ABOUT</router-link></li>
+                <li> <router-link to="/about">BUISNESS</router-link></li>
+                <li> <router-link to="/about">PORTFOLIO</router-link></li>
+                <li> <router-link to="/about">BOARD</router-link></li>
+                <li> <router-link to="/about">APPLY</router-link></li>
+
+            </ul>
+        </nav>
     </div>
+
+    <h1 class="main-title" v-scrollanimation>Best Accelerator for Startups that Monetize from Impacts</h1>
   </header>
 </template>
 
@@ -21,6 +35,7 @@ export default {
 
 header.main{
     height: 455px;
+    background-image: url(../assets/title.jpg);
 }
 
 header{
@@ -48,13 +63,74 @@ header .container.menu-container{
 }
 
 header .container .logoWrap img {
-    width: 400px;
-    height: 200px;
+    width: 200px;
+    height: 100%;
+}
+
+@media (max-width:600px){
+    header .container .logoWrap img{
+        width: 200px;
+        height: 100px;
+    }
 }
 
 img, svg {
     vertical-align: middle;
 }
 
+header nav ul {
+    display: flex;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+.menu-container nav a {
+    position: relative;
+    margin-right: 72px;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.75;
+    letter-spacing: -1.2px;
+    text-align: center;
+     text-decoration: none;
+    color: #ffffff;
+}
+
+.index-page .main-title {
+    font-size: 80px;
+}
+
+element.style {
+    white-space: pre-line;
+    visibility: visible;
+   
+}
+
+header h1 {
+    position: absolute;
+    bottom: -72px;
+    width: 100%;
+    font-size: 144px;
+    font-weight: 900;
+    letter-spacing: -8.64px;
+    text-align: center;
+    height: 200px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.before-enter{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.7s ease-out;
+}
+
+.enter{
+    opacity: 1;
+    transform: translateY(0px);
+}
 
 </style>

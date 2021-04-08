@@ -1,5 +1,30 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Header/>
+    <p>this is about</p>
   </div>
 </template>
+
+<script>
+
+import Header from '../components/header'
+
+
+export default {
+  data(){
+    return{
+
+    }
+  },
+
+  components:{
+    Header
+    
+  }
+}
+</script>
+
+<style scoped>
+
+
+</style>

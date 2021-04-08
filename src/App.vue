@@ -2,14 +2,14 @@
   <div id="app">
     <router-view/>
   </div>
-    <!-- 
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> 
-    !-->
-    
+
 </template>
+
+<script>
+
+
+</script>
+
 
 
 
@@ -30,7 +30,7 @@
 }
 
 body{
-  background-color: #fff;
+  background-color: #000;
   color : #fff;
   font-family: 'Noto Sans KR','Roboto', sans-serif;
   margin: 0;
