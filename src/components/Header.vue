@@ -112,7 +112,7 @@ data(){
     background-size:cover;
     opacity:0.5;
     z-index:1;
-    filter:blur(3px);
+    filter:blur(1px);
 }
 #texthold{
   position:absolute;
