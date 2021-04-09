@@ -14,9 +14,8 @@ app.get(/.*/, function(req,res){
 
 app.get('/test', function(req,res){
     res.send("this is test");
+    console.log("test");
 })
-
-app.listen(port);
 
 const port = process.env.PORT || 8080
 app.listen(port);
