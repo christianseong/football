@@ -1,10 +1,10 @@
 <template>
 <div>
   <div class="Main">
-    <router-link to="/about" class="about-link">창업자들의 생각을 <br>현실로 만들어줍니다</router-link>
+    <router-link to="/about" class="about-link" v-scrollanimation>창업자들의 생각을 <br>현실로 만들어줍니다</router-link>
 
 
-      <section class= "value-wrap">
+      <section class= "value-wrap" v-scrollanimation>
         <div class="animate">
           
           <img class="value" src="../assets/captain-america.png">
@@ -150,5 +150,16 @@ img{
   letter-spacing: -1.44px;
 }
 
+
+.before-enter{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.7s ease-out;
+}
+
+.enter{
+    opacity: 1;
+    transform: translateY(0px);
+}
 
 </style>

@@ -1,5 +1,5 @@
-<template>
-   <section class="statistics-wrap">
+<template >
+   <section class="statistics-wrap" v-scrollanimation>
         <div class="items-wrap">
           <dt class="text-center">
             참여 기업수
@@ -177,6 +177,15 @@ export default {
     text-align: center;
 }
 
+.before-enter{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.7s ease-out;
+}
 
+.enter{
+    opacity: 1;
+    transform: translateY(0px);
+}
 
 </style>

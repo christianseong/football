@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-5c78dd64"],{"371a":function(t,n,c){"use strict";c.r(n);var e=function(){var t=this,n=t.$createElement,c=t._self._c||n;return c("div",{staticClass:"Contact"},[t._v(" contact ")])},a=[],o={mounted:function(){this.$store.commit("setheadertext","Contact")}},s=o,i=(c("a38f"),c("2877")),u=Object(i["a"])(s,e,a,!1,null,"fc0b4e00",null);n["default"]=u.exports},"674b":function(t,n,c){},a38f:function(t,n,c){"use strict";c("674b")}}]);
-//# sourceMappingURL=chunk-5c78dd64.356277a3.js.map
+//# sourceMappingURL=chunk-5c78dd64.a8ed93f7.js.map
