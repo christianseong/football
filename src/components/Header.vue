@@ -6,7 +6,7 @@
             @click="MenuBtnClicked"
             v-show=true
             color="white"
-            size="25"
+            style="font-size: 100px"
             >
          </v-app-bar-nav-icon>
           <div class="NavlogoHolder">
@@ -46,6 +46,8 @@ data(){
     return{
     }
 },
+mounted () {
+    },
   methods:{
       anireset(id,aniclass){
           const element = document.getElementById(id);
@@ -102,14 +104,11 @@ data(){
 </script>
 
 <style scoped>
-ul, ol, li{ 
-    list-style:none;
-}
 .Header{
     transition: all 0.3s ease-in-out;
     position: relative;
     width:100%;
-    height:455px;
+    height:45vh;
     background-color:black;
 }
 .backgroundholder{
@@ -127,8 +126,9 @@ ul, ol, li{
 }
 .MenuBtn{
     display:none;
-    left:3vw;
-    top:3vh;
+    left:4vw;
+    top:4vh;
+    position:absolute;
 }
 #texthold{
   position:absolute;
@@ -174,16 +174,19 @@ ul, ol, li{
     z-index:3;
 }
 .logoholder{
+    display: flex;
     width:100px;
     height:100%;
     background-image: url("../assets/biglogo.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    justify-content:center;
+    align-content: center;
 }
 .NavlogoHolder{
     position: relative;
-    min-width:100px;
+    width: fit-content;
     height:100%;
     margin: 0 5%;
     justify-content: center;
@@ -224,7 +227,6 @@ ul, ol, li{
 .LangSubMenu *{
     display: block;
     position: relative;
-    
 }
 .NavMenuHolder>a{
     position: relative;
@@ -250,34 +252,31 @@ ul, ol, li{
     justify-content: center;
     align-items: center;
 }
-.MobileMenuHolder{
-    position: absolute;
-    display: none;
-    width:0px;
-    height:0px;
-    }
-
+h1{
+        cursor:default;
+}
 @media (max-width: 900px) {
     .Header{
         transition: all 0.3s ease-in-out;
         min-height: 20vh;
     }
-    h1{
-        cursor:default;
+    .logoholder{
+        width:100px;
+        height:100px;
+        justify-self: center;
+        align-self: center;
     }
     .MenuBtn{
     display:block;
     }
-    .logoholder{
-        width:100px;
-        height:100px;
-        /* background-image: url("../assets/logo.png"); */
+    .MenuBtn>span>i{
+        font-size:40px!important;
+    }
+    .MenuBtn{
+    font-size:500px;
     }
     .NavlogoHolder{
         margin: 0 auto;
-    }
-    .NavMenuHolder{
-        display:none;
     }
     #texthold>h1{
     font-weight: 900;
@@ -291,27 +290,21 @@ ul, ol, li{
     .LNavMenuHolder{
         display: none;
     }
-    
-    
-
+    .NavMenuHolder{
+        display:none;
+    }
 }
 @media (max-width: 250px) {
-.MobileBtnHolder{
-    display:block;
-    position:absolute;
-    height:20px;
-    width:20px;
-    top:20px;
-    left:10px;
-    z-index:5;
-    background-image:url("../assets/mobile.png");
-    background-size: cover;
-    }
     .logoholder{
-        width:100px;
+        width:50px;
         height:50px;
         background-image: url("../assets/logo.png");
     }
-    
+    .NavlogoHolder{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 }
 </style>

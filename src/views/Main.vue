@@ -41,7 +41,8 @@
   <Article/>
   <ContactLink/>
   <Footer/>
-  </div>
+</div>
+
 </div>
 
  
@@ -102,7 +103,7 @@ section{
 a{
   text-decoration: none;
   font-size: 40px;
-  color : white;
+  color : white !important;
   text-align: center;
    letter-spacing: -3px;
  
