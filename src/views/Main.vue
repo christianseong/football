@@ -36,11 +36,12 @@
 
     
   </div>
-
+<div style="background-color:white">
   <Statics/>
   <Article/>
   <ContactLink/>
   <Footer/>
+  </div>
 </div>
 
  
