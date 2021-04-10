@@ -147,11 +147,11 @@ mounted () {
 }
 @keyframes headerani {
   0% {
-    left:10%;
+    top:80%;
     opacity:0.3;
   }
   100% {
-    left:0%;
+    top:70%;
     opacity:0.7;
   }
 }
