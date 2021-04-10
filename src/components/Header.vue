@@ -282,7 +282,6 @@ h1{
     text-align: center;
     font-size: 1.7rem;
     letter-spacing: -3px;
-    margin: 0 auto;
     padding: 0 5.1%;
     }
     .LNavMenuHolder{
