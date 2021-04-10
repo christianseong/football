@@ -102,6 +102,6 @@ export default {
   
 }
 .Titleholder a{
-  color: white;
+  color: white!important;
 }
 </style>
