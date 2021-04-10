@@ -105,7 +105,6 @@ mounted () {
 
 <style scoped>
 .Header{
-    transition: all 0.3s ease-in-out;
     position: relative;
     width:100%;
     height:45vh;
@@ -257,7 +256,6 @@ h1{
 }
 @media (max-width: 900px) {
     .Header{
-        transition: all 0.3s ease-in-out;
         min-height: 20vh;
     }
     .logoholder{
