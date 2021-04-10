@@ -1,32 +1,108 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      height="0px"
+    >
+     </v-app-bar>
+     <v-navigation-drawer
+     app
+     v-model=menudraw
+     disable-resize-watcher
+     dark
+     >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title align="center" class="title">
+            <div class="Titleholder"><router-link class="title_name" to="/"><div class="logo"></div>ALL GROUND</router-link></div>
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list
+        nav
+      >
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          :to="item.to"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-main>
+      <Header/>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+import Header from './components/Header.vue'
+export default {
+  name: 'App',
+
+  components: {
+    Header,
+  },
+
+  data: () => ({
+     items: [
+          { title: 'About', icon: 'mdi-cat',to:'/about' },
+          { title: 'Business', icon: 'mdi-cat',to:'/business' },
+          { title: 'Service', icon: 'mdi-cat', to:'/service'},
+          { title: 'Contact', icon: 'mdi-cat', to:'/contact'},
+          { title: 'Apply', icon: 'mdi-cat', to:'/Apply'},
+        ],
+  }),
+  computed:{
+    menudraw:{
+      get(){
+        return this.$store.state.menudraw;
+      },
+      set(bool){
+        return this.$store.commit('setmenudraw',bool);
+      }
+    }
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#app{
+  background-color:black;
 }
-
-#nav {
-  padding: 30px;
+.v-toolbar__content {
+  padding: 0px!important;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.logo{
+  position: relative;
+  justify-self: center;
+  background-image:url('./assets/logo.png');
+  background-position:center;
+  background-size:contain;
+  width:50px;
+  height:50px;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.titlehoder{
+  display:flex;
+  
+}
+.Titleholder a{
+  text-decoration: none;
+  color: white !important;
 }
 </style>
