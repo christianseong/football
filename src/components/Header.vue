@@ -99,7 +99,7 @@ mounted () {
             break;
             }
         },
-  }
+  },
 }
 </script>
 

@@ -10,7 +10,16 @@
      v-model=menudraw
      disable-resize-watcher
      dark
+     :src=src
      >
+     <template
+     v-slot:img="props"
+     >
+     <v-img
+     :gradient="gradient"
+     v-bind="props"
+     />
+     </template>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title align="center" class="title">
@@ -58,7 +67,9 @@ export default {
   components: {
     Header,
   },
+mounted(){
 
+},
   data: () => ({
      items: [
           { title: 'About', icon: 'mdi-cat',to:'/about' },
@@ -67,6 +78,8 @@ export default {
           { title: 'Contact', icon: 'mdi-cat', to:'/contact'},
           { title: 'Apply', icon: 'mdi-cat', to:'/Apply'},
         ],
+        src:"https://i.ibb.co/pQmZKjZ/unnamed.jpg",
+        gradient:'rgba(0,0,0,.7), rgba(0,0,0,.7)'
   }),
   computed:{
     menudraw:{
@@ -76,8 +89,42 @@ export default {
       set(bool){
         return this.$store.commit('setmenudraw',bool);
       }
-    }
+    },
   },
+
+  watch:{
+    $route(to){
+          switch(to.name){
+            case "Main":
+            this.src="https://i.ibb.co/XLtXKhP/title-mono.png";
+            break;
+            
+            case "About":
+            this.src="https://i.ibb.co/nf7PMVX/1.jpg";
+            break;
+                    
+            case "Business":
+            this.src="https://i.ibb.co/PrTv1Sq/123-2.jpg";
+            break;
+            
+            case "Service":
+            this.src="https://i.ibb.co/LtvrVTX/title.jpg";
+            break;
+
+            case "Contact":
+            this.src="https://i.ibb.co/tx1kKhT/Little-cat-im-hungry-Animal-Photo-HD-Wallpaper-1366x768.jpg";
+            break;
+            
+            default:
+            this.src="https://i.ibb.co/pQmZKjZ/unnamed.jpg";
+            break;
+            }
+        },
+  }
+
+
+
+
 };
 </script>
 
