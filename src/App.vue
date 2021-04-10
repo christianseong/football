@@ -129,8 +129,10 @@ mounted(){
 </script>
 
 <style>
+
 #app{
   background-color:black;
+  font-family: 'Noto Sans KR';
 }
 .v-toolbar__content {
   padding: 0px!important;

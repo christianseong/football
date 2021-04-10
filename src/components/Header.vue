@@ -135,8 +135,7 @@ mounted () {
   width: 100%;
   height:fit-content;
   justify-content: center;
-  right:10%;
-  top:70%;
+  top: 70%;
   z-index:3;
   overflow: hidden;
 }
@@ -159,7 +158,7 @@ mounted () {
   font-weight: 900;
   color:white;
   text-align: center;
-  font-size: 5rem;
+  font-size: 8.3rem;
   letter-spacing: -8px;
   margin: 0 auto;
   padding: 0 5%;
