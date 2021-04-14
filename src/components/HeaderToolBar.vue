@@ -1,9 +1,11 @@
 <template>
 <v-tabs
 v-if="!IsPhone"
+background-color="black"
 show-arrows
 height="50"
-class="d-inline-flex align-end justify-space-around"
+width="100%"
+class="d-flex align-end justify-space-around align-self-end"
 >
   <v-tab
   v-for="i in Menulist" :Key="i.title"

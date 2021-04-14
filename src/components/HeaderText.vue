@@ -33,6 +33,7 @@ watch:{
 #texthold{
   position:absolute;
   width:100%;
+  left:0%;
   display: flex;
   justify-content: center;
   opacity:0;
@@ -50,26 +51,56 @@ watch:{
 }
 @keyframes headerani {
   0% {
-    top:150px;
+    top:50%;
     opacity:0;
   }
   100% {
-    top:50px;
-    opacity:1;
+    top:30%;
+    opacity:.6;
+  }
+}
+@media (max-width:1250px){
+  #texthold{
+    left:5%;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width:1100px){
+  #texthold{
+    left:7%;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width:1070px){
+  #texthold{
+    left:15%;
+    font-size: 2.5rem;
+  }
+}
+@media (max-width:960px){
+  #texthold{
+    font-size: 2rem;
   }
 }
 
-@media (max-width:960px){
+@media (max-width:770px){
+#texthold{
+    left:20%;
+  }
   @keyframes headerani {
   0% {
     top:75px;
     opacity:0;
   }
   100% {
-    top:25px;
-    opacity:1;
+    top:30px;
+    opacity:.6;
+  }
   }
 }
+@media (max-width:620px){
+#texthold{
+    display: none;
+  }
 }
-
 </style>

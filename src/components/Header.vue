@@ -2,14 +2,34 @@
     <v-app-bar
       app
       dark
-      scroll-threshold="1"
       :height="Height"
       color="black"
-      :src="this.$store.state.TitleImg"
-      class="overflow-hidden"
-      id="appbar"
     >
-    <HeaderText/>
+    <v-card
+    width="100%"
+    height="100%"
+    class="d-flex black"
+    >
+    <v-row>
+      <v-col cols="6">
+        <router-link to="/">
+        <v-img
+        class="logoholder"
+        contain
+        width="200px"
+        src="@/assets/logo_white_wider.png"
+        >
+        </v-img>
+        </router-link>
+      </v-col>
+      <v-col cols="6">
+        <HeaderText/>
+      </v-col>
+      <v-col cols="12" class="mb-2 pa-0 d-flex align-self-end">
+        <HeaderToolBar />
+      </v-col>
+    </v-row>
+    </v-card>
     <v-app-bar-nav-icon style="z-index:50;" absolute v-show=IsPhone @click="OpenDrawer"></v-app-bar-nav-icon>
     <template v-slot:img="{ props }">
         <v-img
@@ -17,7 +37,6 @@
           gradient="to top right, rgba(0,0,0,.0), rgba(255,255,255,.0)"
         ></v-img>
       </template>
-    <HeaderToolBar />
     </v-app-bar>
 </template>
 
@@ -73,26 +92,26 @@ watch:{
       $route(to){
           switch(to.name){
             case "Main":
-            this.setwallpaper("https://i.ibb.co/zZJGWNx/title4.png");
+            this.setwallpaper("");
             break;
 
             case "About":
-            this.setwallpaper("https://i.ibb.co/zZJGWNx/title4.png");
+            this.setwallpaper("");
             break;
 
             case "Business":
-            this.setwallpaper("https://i.ibb.co/zZJGWNx/title4.png");
+            this.setwallpaper("");
             break;
 
             case "Service":
-            this.setwallpaper("https://i.ibb.co/zZJGWNx/title4.png");
+            this.setwallpaper("");
             break;
             case "Contact":
-            this.setwallpaper("https://i.ibb.co/zZJGWNx/title4.png");
+            this.setwallpaper("");
             break;
 
             default:
-            this.setwallpaper("https://i.ibb.co/zZJGWNx/title4.png");
+            this.setwallpaper("");
             break;
             }
         },
@@ -103,6 +122,20 @@ watch:{
 </script>
 
 <style scoped>
-#appbar{
+.logoholder{
+  top:90%;
+  left:30%;
+  z-index:10
+}
+
+@media (max-width:960px){
+  .logoholder{
+  top:50%;
+  }
+  @media (max-width:620px){
+  .logoholder{
+    left:60%;
+  }
+}
 }
 </style>
