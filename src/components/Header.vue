@@ -9,7 +9,8 @@
       class="overflow-hidden"
       id="appbar"
     >
-    <v-app-bar-nav-icon absolute v-show=IsPhone @click="OpenDrawer"></v-app-bar-nav-icon>
+    <HeaderText/>
+    <v-app-bar-nav-icon style="z-index:50;" absolute v-show=IsPhone @click="OpenDrawer"></v-app-bar-nav-icon>
     <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
@@ -22,10 +23,12 @@
 
 <script>
 import HeaderToolBar from '@/components/HeaderToolBar.vue'
+import HeaderText from '@/components/HeaderText.vue'
 export default {
 
 components: {
   HeaderToolBar,
+  HeaderText
 },
 
 data(){

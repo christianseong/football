@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer
     app
-    :elevation="10"
+    z-index="10"
     disable-resize-watcher
     v-model="Drawerbool"
     temporary

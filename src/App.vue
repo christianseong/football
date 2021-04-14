@@ -1,7 +1,6 @@
 <template>
   <v-app v-scroll="onScroll">
       <Header/>
-      <HeaderText/>
       <Drawer/>
       <Drop/>
       <v-main>
@@ -15,7 +14,6 @@
 import Drawer from './components/Drawer.vue'
 import Header from './components/Header.vue'
 import Drop from '@/components/DropMenu.vue'
-import HeaderText from '@/components/HeaderText.vue'
 export default {
   name: 'App',
 
@@ -23,7 +21,6 @@ export default {
     Drawer,
     Header,
     Drop,
-    HeaderText,
   },
 
   data: () => ({
