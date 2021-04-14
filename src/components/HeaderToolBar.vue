@@ -1,7 +1,7 @@
 <template>
 <v-tabs
 v-if="!IsPhone"
-background-color="black"
+background-color="transparent"
 show-arrows
 height="50"
 width="100%"

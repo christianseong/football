@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center" style="position:fixed; top:0%; left:85%; z-index:100; ">
+  <div class="text-center" style="position:fixed; top:0%; left:70vw; z-index:100; ">
     <v-menu
       open-on-hover
       offset-y
