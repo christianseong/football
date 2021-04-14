@@ -4,11 +4,13 @@
       dark
       :height="Height"
       color="black"
+      :src="this.$store.state.TitleImg"
     >
     <v-card
     width="100%"
     height="100%"
-    class="d-flex black"
+    class="d-flex transparent"
+    elevation="0"
     >
     <v-row>
       <v-col cols="6">
