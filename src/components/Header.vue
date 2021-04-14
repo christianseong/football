@@ -2,8 +2,6 @@
     <v-app-bar
       app
       dark
-      fade-img-on-scroll
-      shrink-on-scroll
       scroll-threshold="1"
       :height="Height"
       color="black"
