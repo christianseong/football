@@ -1,7 +1,6 @@
 <template>
     <v-app-bar
       app
-      prominent
       dark
       fade-img-on-scroll
       shrink-on-scroll
