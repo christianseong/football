@@ -35,7 +35,6 @@ watch:{
   width:100%;
   display: flex;
   justify-content: center;
-  top:-130px;
   opacity:0;
   z-index:5;
   overflow:hidden;
@@ -51,12 +50,26 @@ watch:{
 }
 @keyframes headerani {
   0% {
-    top:-120px;
+    top:150px;
     opacity:0;
   }
   100% {
-    top:-130px;
+    top:50px;
     opacity:1;
   }
 }
+
+@media (max-width:960px){
+  @keyframes headerani {
+  0% {
+    top:75px;
+    opacity:0;
+  }
+  100% {
+    top:25px;
+    opacity:1;
+  }
+}
+}
+
 </style>

@@ -5,8 +5,8 @@
       dark
       fade-img-on-scroll
       shrink-on-scroll
-      scroll-threshold="50"
-      height="200"
+      scroll-threshold="1"
+      :height="Height"
       color="black"
       :src="this.$store.state.TitleImg"
       class="overflow-hidden"
@@ -24,7 +24,6 @@
 </template>
 
 <script>
-
 import HeaderToolBar from '@/components/HeaderToolBar.vue'
 export default {
 
@@ -55,6 +54,16 @@ computed:{
       case 'md' :  return false;
       case 'lg' :  return false;
       case 'xl' :  return false;
+      default:  return false;
+    }
+    },
+    Height(){
+    switch(this.$vuetify.breakpoint.name){
+      case 'xs' :  return 100;
+      case 'sm' :  return 100;
+      case 'md' :  return 200;
+      case 'lg' :  return 200;
+      case 'xl' :  return 200;
       default:  return false;
     }
     },

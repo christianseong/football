@@ -1,10 +1,10 @@
 <template>
   <v-app v-scroll="onScroll">
       <Header/>
+      <HeaderText/>
       <Drawer/>
       <Drop/>
       <v-main>
-        <HeaderText/>
         <router-view/>
       </v-main>
   </v-app>

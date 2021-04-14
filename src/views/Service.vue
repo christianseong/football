@@ -2,6 +2,7 @@
 <v-container>
 <h1 style="text-align:end;">더 굽혀 이쉑기야.jpg</h1>
 <v-img src="https://rnc.samsungcnt.com/company/rd2/academy/__icsFiles/artimage/2015/07/07/gamc_b4aca00/img_academy03.jpg"></v-img>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </v-container>
 </template>
 
