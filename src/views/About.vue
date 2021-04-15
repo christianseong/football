@@ -1,7 +1,7 @@
 <template>
   <v-item-group multiple>
     <v-container class="pt-5">
-      <v-row class="mt-16 mb-16 d-flex justify-center">
+      <v-row class="mt-16 mb-16 d-flex justify-center overflow-hidden">
         <v-col
           cols="12"
           style="text-align: center"
@@ -217,6 +217,7 @@ export default {
   mounted(){
     this.$vuetify.goTo(0, {duration:300,offset:0,easing:'easeInOutCubic'});
     this.$store.commit('SetHeaderText','About');
+    this.$store.commit('SetHover',false);
   },
 }
 </script>

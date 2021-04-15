@@ -6,8 +6,8 @@
     flat
     height="74"
     class="pa-0"
-    @mouseover="hoveract"
-    @mouseleave="hover=false"
+    @mouseover="hoveract(true)"
+    @mouseleave="hoveract(false)"
     >
     <v-container fluid>
         <HeaderText v-if="this.$vuetify.breakpoint.smAndDown===true" />
@@ -39,15 +39,19 @@ export default {
     },
     data(){
         return{
-            hover:false,
         }
     },
     mounted(){
     },
     methods:{
-        hoveract(){
-            if(this.$store.state.TestHover==true) this.hover=true;
+        hoveract(bool){
+            if(this.$store.state.TestHover===true)this.$store.commit('SetHover',bool);
         },
+    },
+    computed:{
+        hover(){
+            return this.$store.state.Hover;
+        }
     },
 }
 </script>

@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     TestHover:false,
+    Hover:false,
     Drawerbool:false,
     headertext:"",
     Menulist:[
@@ -19,6 +20,9 @@ export default new Vuex.Store({
   mutations: {
     SetTestHover(state,bool){
       state.TestHover = bool;
+    },
+    SetHover(state,bool){
+      state.Hover=bool;
     },
     SetDrawer(state,bool){
       state.Drawerbool=bool;
