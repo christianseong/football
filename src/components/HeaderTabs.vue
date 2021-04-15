@@ -7,7 +7,7 @@
         <v-card class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/logo_white_wid.png"></v-img></v-card>
     </v-col>
 
-    <v-spacer></v-spacer>
+    <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
 
     <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
         <v-tab v-for="i in menulist" :key="i.title" :to="i.to">

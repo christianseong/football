@@ -10,11 +10,11 @@ export default new Vuex.Store({
     Drawerbool:false,
     headertext:"",
     Menulist:[
-      { title: 'About', icon: 'mdi-cat', to:'/about'},
-      { title: 'Business', icon: 'mdi-cat', to:'/business'},
-      { title: 'Contact', icon: 'mdi-cat', to:'/contact'},
-      { title: 'Notice', icon: 'mdi-cat', to:'/notice'},
-      { title: 'Apply', icon: 'mdi-cat', to:'/apply'},
+      { title: 'About', icon: 'mdi-alpha-a', to:'/about'},
+      { title: 'Business', icon: 'mdi-alpha-b', to:'/business'},
+      { title: 'Contact', icon: 'mdi-alpha-c', to:'/contact'},
+      { title: 'Notice', icon: 'mdi-alpha-n', to:'/notice'},
+      { title: 'Apply', icon: 'mdi-alpha-a', to:'/apply'},
       ],
   },
   mutations: {

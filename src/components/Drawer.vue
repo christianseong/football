@@ -6,14 +6,16 @@
     v-model="Drawerbool"
     temporary
     right
+    dark
     >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
-            <v-list-item to="/">나만고양이없어</v-list-item>
+            <v-card class="ma-0 pa-0" color="transparent" to="/"><v-img contain src="@/assets/logo_white_wid.png"></v-img></v-card>
+            
           </v-list-item-title>
           <v-list-item-subtitle>
-            Testing...
+            <!--  -->
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -21,7 +23,6 @@
       <v-divider></v-divider>
 
       <v-list
-        dense
         nav
       >
         <v-list-item
@@ -35,7 +36,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title class="EngFont">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -66,5 +67,8 @@ export default {
 </script>
 
 <style scoped>
-
+.EngFont{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
 </style>

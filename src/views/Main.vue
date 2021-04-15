@@ -1,7 +1,6 @@
 <template>
 <div>
 <v-card elevation="0"  class="overflow-y-auto" >
-      <p style="position:absolute; z-index:1; color:white; font-size:0.5rem;">거의 모든 사진들은인터넷에서 퍼온사진이라 나중에 바꿔야댐</p>
       <v-img src="https://stillmedab.olympic.org/media/Images/OlympicOrg/News/2019/05/27/Amsterdam-1928-football/2019-05-27-Amsterdam-1928-football-featured.jpg"></v-img>
       <p style="position:absolute; z-index:1;" class="MainText textholderani">FALL SEVEN TIMES</p>
       <p style="position:absolute; z-index:2;" class="MainText2 textholderani2">STAND UP EIGHT.</p>
