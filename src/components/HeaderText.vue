@@ -41,7 +41,8 @@ watch:{
   overflow:hidden;
   color:white;
   font-size: 1.3rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -.5px;
+  font-weight: 100;
   font-family: 'Do Hyeon', sans-serif;
 }
 .textholderani{
