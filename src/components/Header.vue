@@ -1,0 +1,59 @@
+<template>
+<v-container class="pa-0 ma-0 Header" fluid>
+<v-app-bar
+    app
+    color="black"
+    flat
+    height="74"
+    class="pa-0"
+    @mouseover="hoveract"
+    @mouseleave="hover=false"
+    >
+    <v-container fluid>
+        <HeaderText v-if="this.$vuetify.breakpoint.smAndDown===true" />
+    <v-row>
+        <v-col cols="12">
+            <HeaderTabs/>
+        </v-col>
+        <v-fade-transition>
+        <v-col cols="12" class="py-0" v-show="hover" style="background-color:black; position:absolute; z-index:10; top:100%;">
+            <HeaderDropMenu/>
+        </v-col>
+        </v-fade-transition>
+    </v-row>
+    </v-container>
+</v-app-bar>
+</v-container>
+</template>
+
+<script>
+import HeaderTabs from'@/components/HeaderTabs.vue'
+import HeaderDropMenu from'@/components/HeaderDropMenu.vue'
+import HeaderText from'@/components/HeaderText.vue'
+export default {
+    name: 'Header',
+    components:{
+        HeaderTabs,
+        HeaderDropMenu,
+        HeaderText,
+    },
+    data(){
+        return{
+            hover:false,
+        }
+    },
+    mounted(){
+    },
+    methods:{
+        hoveract(){
+            if(this.$store.state.TestHover==true) this.hover=true;
+        },
+    },
+}
+</script>
+
+<style scoped>
+/deep/ .v-toolbar__content {
+  padding: 0px !important;
+}
+</style>
