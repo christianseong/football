@@ -4,8 +4,8 @@
 <v-row class="ma-0 pa-0">
 
     <v-col col="3" class="d-flex justify-start pa-0">
-        <v-card v-if="this.$vuetify.breakpoint.smAndDown===false" class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoBlack===true ? require('@/assets/logo_black_wid.png') : require('@/assets/logo_white_wid.png')" ></v-img></v-card>
-        <v-card v-if="this.$vuetify.breakpoint.smAndDown===true" class="transparent" elevation="0" height="50px" width="75px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoBlack===true ? require('@/assets/logo_black.png') : require('@/assets/logo_white.png') " ></v-img></v-card>
+        <v-card v-if="this.$vuetify.breakpoint.smAndDown===false" class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoWhite===true ? require('@/assets/logo_black_wid.png') : require('@/assets/logo_white_wid.png')" ></v-img></v-card>
+        <v-card v-if="this.$vuetify.breakpoint.smAndDown===true" class="transparent" elevation="0" height="50px" width="75px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoWhite===true ? require('@/assets/logo_black.png') : require('@/assets/logo_white.png') " ></v-img></v-card>
     </v-col>
 
     <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
@@ -52,8 +52,8 @@ export default {
         HeaderTextColor(){
             return this.$store.state.HeaderTextColor;
         },
-        LogoBlack(){
-            return this.$store.state.LogoBlack;
+        LogoWhite(){
+            return this.$store.state.LogoWhite;
         },
     },
 }

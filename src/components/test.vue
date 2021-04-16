@@ -91,7 +91,7 @@
       return{
         switch1:false,
         switch2:false,
-        switch3:true,
+        switch3:false,
         HeaderColor:null,
         HeaderTextColor:null,
       }
@@ -104,7 +104,7 @@ watch:{
       this.$store.commit('SetTestHover',this.switch2);
   },
   switch3(){
-    this.$store.commit('SetLogoBlack',this.switch3);
+    this.$store.commit('SetLogoWhite',this.switch3);
   },
 
 },
