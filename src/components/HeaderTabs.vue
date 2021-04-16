@@ -10,9 +10,11 @@
     <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
 
     <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
-        <div v-for="i in menulist" :key="i.title" class="tabs" ><v-tab :to="i.to">
-        <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p><span class="borderspan"></span>
-        </v-tab></div>
+        <div style v-for="i in menulist" :key="i.title" class="tabs" >
+            <v-tab :to="i.to">
+                <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p><span class="borderspan"></span>
+            </v-tab>
+        </div>
     </v-col>
 
     <v-spacer></v-spacer>
@@ -55,6 +57,9 @@ export default {
 .EngFont{
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
+    letter-spacing:-.3px;
+    font-size:1rem;
+    min-width:90px;
     color:white;
 }
 .v-tab:hover .borderspan {

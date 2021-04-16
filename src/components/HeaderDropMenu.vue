@@ -52,26 +52,26 @@ export default {
     data(){
         return{
             s1:[
-            {title:"PEOPLE", to:'/',},
-            {title:"What we", to:'/'},
+            {title:"PEOPLE", to:'/about',},
+            {title:"What we", to:'/about'},
             ],
 
             s2:[
-            {title:"HISTORY", to:'/',},
+            {title:"HISTORY", to:'/business',},
             ],
             s3:[
-            {title:"cc", to:'/',},
+            {title:"cc", to:'/contact',},
             ],
             s4:[
-            {title:"location", to:'/',},
-            {title:"notice", to:'/'},
+            {title:"location", to:'/notice',},
+            {title:"notice", to:'/notice'},
             ],
             s5:[
-            {title:"sub1", to:'/',},
-            {title:"sub2", to:'/'},
-            {title:"sub3", to:'/'},
-            {title:"sub4", to:'/'},
-            {title:"sub5", to:'/'},
+            {title:"sub1", to:'/apply',},
+            {title:"sub2", to:'/apply'},
+            {title:"sub3", to:'/apply'},
+            {title:"sub4", to:'/apply'},
+            {title:"sub5", to:'/apply'},
             ],
         }
     },
@@ -91,7 +91,8 @@ export default {
     font-weight: 300;
     color:white;
     font-size:1rem;
-    letter-spacing:-.5px;
+    letter-spacing:-.3px;
+    min-width:90px;
 }
 .v-tab, .v-tab:hover {
   width:100px;
