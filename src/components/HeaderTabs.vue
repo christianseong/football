@@ -10,8 +10,8 @@
     <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
 
     <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
-        <v-tab v-for="i in menulist" :key="i.title" :to="i.to">
-        <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p>
+        <v-tab v-for="i in menulist" :key="i.title" :to="i.to" class="tabs">
+        <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p><span class="borderspan"></span>
         </v-tab>
     </v-col>
 
@@ -57,7 +57,16 @@ export default {
     font-weight: 600;
     color:white;
 }
-.v-tab, .v-tab:hover {
-  width:100px;
+.v-tab:hover .borderspan {
+    width:100%;
+    opacity:1;
+}
+.borderspan{
+    bottom:-2px; left:0; width:0; height:1.8px;
+    position:absolute;
+    background:white;
+    transition: all .2s;
+    z-index:2;
+    opacity:0;
 }
 </style>

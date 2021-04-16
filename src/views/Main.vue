@@ -8,7 +8,7 @@
 
 <v-container style="overflow:hidden;" class="mt-16">
 
-  <v-card elevation="5" id="ani1" class="my-16 pa-10 rounded-xl blue-grey lighten-4" v-intersect="onIntersect">
+  <v-card elevation="5" id="ani1" class="my-16 pa-10 rounded-xl blue-grey lighten-4">
     <v-row>
       <v-col cols="12">
         <h1 class="Font">올그라운드는???????</h1>
@@ -23,7 +23,7 @@
     </v-row>
   </v-card>
 
-  <v-card elevation="5" id="ani2" class="pa-10 rounded-xl blue-grey lighten-4" v-intersect="onIntersect2" >
+  <v-card elevation="5" id="ani2" class="pa-10 rounded-xl blue-grey lighten-4">
     <v-row>
       <v-col cols="12" >
         <h1 class="Font">123<br> 치킨은 가마치<br></h1>
@@ -47,19 +47,27 @@ components: {
     this.$vuetify.goTo(0, {duration:300,offset:0,easing:'easeInOutCubic'});
     this.$store.commit('SetHeaderText','ALL GROUND');
     this.$store.commit('SetHover',false);
+    this.SetBoarderLine();
   },
   methods:{
-    anireset(id,aniclass){
-      const element = document.getElementById(id);
-      element.classList.remove(aniclass);
-      void element.offsetWidth;
-      element.classList.add(aniclass);
-    },
-    onIntersect(){
-      this.anireset('ani1','cardani');
-    },
-    onIntersect2(){
-      this.anireset('ani2','cardani2');
+    // anireset(id,aniclass){
+    //   const element = document.getElementById(id);
+    //   element.classList.remove(aniclass);
+    //   void element.offsetWidth;
+    //   element.classList.add(aniclass);
+    // },
+    // onIntersect(){
+    //   this.anireset('ani1','cardani');
+    // },
+    // onIntersect2(){
+    //   this.anireset('ani2','cardani2');
+    // },
+    SetBoarderLine(){
+      for(var i=0; i<this.$store.state.Menulist.length; i++)
+      {
+        if(this.$store.state.Menulist[i].title!='Main')document.getElementsByClassName('tabs')[i].style.borderBottom = "0px solid white";
+        else document.getElementsByClassName('tabs')[i].style.borderBottom = "2px solid white";
+      }
     },
   },
   watch:{
@@ -127,36 +135,6 @@ components: {
   100% {
     left:40%;
     opacity:0.7572;
-  }
-}
-.cardani{
-  animation-name:cardani;
-    animation-duration:2s;
-    animation-fill-mode: forwards;
-}
-@keyframes cardani {
-  0% {
-    right:-10%;
-    opacity:0;
-  }
-  100% {
-    right:0%;
-    opacity:1;
-  }
-}
-.cardani2{
-  animation-name:cardani2;
-    animation-duration:2s;
-    animation-fill-mode: forwards;
-}
-@keyframes cardani2 {
-  0% {
-    top:5%;
-    opacity:0;
-  }
-  100% {
-    top:0%;
-    opacity:1;
   }
 }
 @media (max-width:1400px){
