@@ -16,6 +16,8 @@ export default new Vuex.Store({
       { title: 'Notice', icon: 'mdi-alpha-n', to:'/notice'},
       { title: 'Apply', icon: 'mdi-alpha-a', to:'/apply'},
       ],
+    HeaderColor:"#000000FF",
+    HeaderTextColor:"#FFFFFFFF",
   },
   mutations: {
     SetTestHover(state,bool){
@@ -29,6 +31,12 @@ export default new Vuex.Store({
     },
     SetHeaderText(state,payload){
       state.headertext = payload;
+    },
+    SetHeaderColor(state,payload){
+      state.HeaderColor = payload;
+    },
+    SetHeaderTextColor(state,payload){
+      state.HeaderTextColor = payload;
     },
   },
   actions: {

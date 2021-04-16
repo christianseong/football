@@ -3,8 +3,9 @@
 
 <v-row class="ma-0 pa-0">
 
-    <v-col col="3" class="d-flex justify-center pa-0">
-        <v-card class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/logo_white_wid.png"></v-img></v-card>
+    <v-col col="3" class="d-flex justify-start pa-0">
+        <v-card v-if="this.$vuetify.breakpoint.smAndDown===false" class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/logo_white_wid.png"></v-img></v-card>
+        <v-card v-if="this.$vuetify.breakpoint.smAndDown===true" class="transparent" elevation="0" height="50px" width="75px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/logo_white.png"></v-img></v-card>
     </v-col>
 
     <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
@@ -12,7 +13,7 @@
     <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
         <div style v-for="i in menulist" :key="i.title" class="tabs" >
             <v-tab :to="i.to">
-                <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p><span class="borderspan"></span>
+                <p style="white-space:pre;" v-bind:style="{color:HeaderTextColor}" class="ma-0 EngFont">{{i.title}}</p><span class="borderspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span>
             </v-tab>
         </div>
     </v-col>
@@ -45,10 +46,12 @@ export default {
     methods:{
     OpenDrawer(){
     this.$store.commit('SetDrawer',!this.$store.state.Drawerbool);
-    console.log(this.$store.state.Drawerbool);
     },
     },
     computed:{
+        HeaderTextColor(){
+            return this.$store.state.HeaderTextColor;
+        },
     },
 }
 </script>
@@ -60,7 +63,7 @@ export default {
     letter-spacing:-.3px;
     font-size:1rem;
     min-width:90px;
-    color:white;
+    /* color:white; */
 }
 .v-tab:hover .borderspan {
     width:100%;
@@ -69,7 +72,7 @@ export default {
 .borderspan{
     bottom:-6px; left:0; width:0; height:2px;
     position:absolute;
-    background:white;
+    /* background:white; */
     transition: all .2s;
     z-index:2;
     opacity:0;

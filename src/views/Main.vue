@@ -47,7 +47,7 @@ components: {
     this.$vuetify.goTo(0, {duration:300,offset:0,easing:'easeInOutCubic'});
     this.$store.commit('SetHeaderText','ALL GROUND');
     this.$store.commit('SetHover',false);
-    this.SetBoarderLine();
+    if(this.$vuetify.breakpoint.smAndDown===false)this.SetBoarderLine();
   },
   methods:{
     // anireset(id,aniclass){
@@ -65,8 +65,8 @@ components: {
     SetBoarderLine(){
       for(var i=0; i<this.$store.state.Menulist.length; i++)
       {
-        if(this.$store.state.Menulist[i].title!='Main')document.getElementsByClassName('tabs')[i].style.borderBottom = "0px solid white";
-        else document.getElementsByClassName('tabs')[i].style.borderBottom = "2px solid white";
+        if(this.$store.state.Menulist[i].title!='Main')document.getElementsByClassName('tabs')[i].style.borderBottom = "";
+        else document.getElementsByClassName('tabs')[i].style.borderBottom = `2px solid ${this.$store.state.HeaderTextColor}`;
       }
     },
   },

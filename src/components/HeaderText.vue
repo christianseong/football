@@ -33,7 +33,6 @@ watch:{
 #texthold{
   position:absolute;
   width:100%;
-  left:0%;
   display: flex;
   justify-content: center;
   opacity:0;
@@ -43,7 +42,6 @@ watch:{
   font-size: 1.3rem;
   letter-spacing: -.5px;
   font-weight: 100;
-  font-family: 'Do Hyeon', sans-serif;
 }
 .textholderani{
     animation-name:headerani;
@@ -52,11 +50,11 @@ watch:{
 }
 @keyframes headerani {
   0% {
-    top:70%;
+    top:40%;
     opacity:0;
   }
   100% {
-    top:60%;
+    top:30%;
     opacity:1;
   }
 }

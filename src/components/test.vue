@@ -1,9 +1,10 @@
 <template>
   <div class="text-center" style="position:fixed; top:20%; left:0; z-index:100;">
     <v-menu
-      open-on-hover
       offset-y
       dark
+      open-on-hover
+      :close-on-content-click="false"
     >
     <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -35,6 +36,32 @@
         ></v-switch>
         </v-list-item>
 
+        <hr>
+        <p class="black">헤더 색깔조정</p>
+        <v-list-item>
+        <v-color-picker
+        dot-size="25"
+        mode="hexa"
+        swatches-max-height="100"
+        canvas-height="100"
+        value="#000000FF"
+        @input="HeaderColorInput"
+        ></v-color-picker>
+        </v-list-item>
+
+
+        <hr>
+        <p class="black">헤더 글씨 색깔조정</p>
+        <v-list-item>
+        <v-color-picker
+        dot-size="25"
+        mode="hexa"
+        swatches-max-height="100"
+        canvas-height="100"
+        value="#FFFFFFFF"
+        @input="HeaderTextColorInput"
+        ></v-color-picker>
+        </v-list-item>
 
       </v-list>
     </v-menu>
@@ -49,6 +76,8 @@
       return{
         switch1:false,
         switch2:false,
+        HeaderColor:null,
+        HeaderTextColor:null,
       }
     },
 watch:{
@@ -80,6 +109,12 @@ OpenDrawer(){
 },
 bonobono(){
   this.$store.commit('SetTitleImg','https://i.ibb.co/sjNtwp4/bonobono.png')
+},
+HeaderColorInput(e){
+  this.$store.commit('SetHeaderColor',e);
+},
+HeaderTextColorInput(e){
+  this.$store.commit('SetHeaderTextColor',e);
 },
 
 

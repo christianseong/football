@@ -11,7 +11,7 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
-            <v-card class="ma-0 pa-0" color="transparent" to="/"><v-img contain src="@/assets/logo_white_wid.png"></v-img></v-card>
+            <v-card class="ma-0 pa-0" color="transparent" to="/"><v-img contain src="@/assets/logo_white.png"></v-img></v-card>
             
           </v-list-item-title>
           <v-list-item-subtitle>

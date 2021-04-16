@@ -2,7 +2,7 @@
 <v-container class="pa-0 ma-0 Header" fluid>
 <v-app-bar
     app
-    color="black"
+    :color="HeaderColor"
     flat
     height="74"
     class="pa-0"
@@ -51,7 +51,11 @@ export default {
     computed:{
         hover(){
             return this.$store.state.Hover;
-        }
+        },
+        HeaderColor(){
+            return this.$store.state.HeaderColor;
+        },
+        
     },
 }
 </script>

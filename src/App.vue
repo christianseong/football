@@ -28,3 +28,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+  * {
+    font-family: 'Do Hyeon','Noto Sans KR';
+  }
+</style>
