@@ -19,49 +19,64 @@
 
 
       <v-list>
+        <v-row>
+          <v-col>
+            <v-list-item>
+              <v-switch
+              label="breakpoint 로그찍기"
+              color="red"
+              v-model="switch1"
+              ></v-switch>
+             </v-list-item>
+             <v-list-item>
+            <v-switch
+            label="dropmenu on"
+            color="red"
+            v-model="switch2"
+            ></v-switch>
+            </v-list-item>
+          </v-col>
 
-        <v-list-item>
-        <v-switch
-        label="breakpoint 로그찍기"
-        color="red"
-        v-model="switch1"
-        ></v-switch>
-        </v-list-item>
+          <v-col>
+            <v-list-item>
+            <v-switch
+            label="로고 토글"
+            color="white"
+            v-model="switch3"
+            ></v-switch>
+            </v-list-item>
+          </v-col>
 
-        <v-list-item>
-        <v-switch
-        label="dropmenu on"
-        color="red"
-        v-model="switch2"
-        ></v-switch>
-        </v-list-item>
+          <v-col>
+            <hr>
+            <p class="black">헤더 색깔조정</p>
+            <v-list-item>
+            <v-color-picker
+            dot-size="25"
+            mode="hexa"
+            swatches-max-height="100"
+            canvas-height="100"
+            value="#000000FF"
+            @input="HeaderColorInput"
+            ></v-color-picker>
+            </v-list-item>
+          </v-col>
 
-        <hr>
-        <p class="black">헤더 색깔조정</p>
-        <v-list-item>
-        <v-color-picker
-        dot-size="25"
-        mode="hexa"
-        swatches-max-height="100"
-        canvas-height="100"
-        value="#000000FF"
-        @input="HeaderColorInput"
-        ></v-color-picker>
-        </v-list-item>
-
-
-        <hr>
-        <p class="black">헤더 글씨 색깔조정</p>
-        <v-list-item>
-        <v-color-picker
-        dot-size="25"
-        mode="hexa"
-        swatches-max-height="100"
-        canvas-height="100"
-        value="#FFFFFFFF"
-        @input="HeaderTextColorInput"
-        ></v-color-picker>
-        </v-list-item>
+          <v-col>
+            <hr>
+            <p class="black">헤더 글씨 색깔조정</p>
+            <v-list-item>
+            <v-color-picker
+            dot-size="25"
+            mode="hexa"
+            swatches-max-height="100"
+            canvas-height="100"
+            value="#FFFFFFFF"
+            @input="HeaderTextColorInput"
+            ></v-color-picker>
+            </v-list-item>
+          </v-col>
+        </v-row>
 
       </v-list>
     </v-menu>
@@ -76,6 +91,7 @@
       return{
         switch1:false,
         switch2:false,
+        switch3:true,
         HeaderColor:null,
         HeaderTextColor:null,
       }
@@ -86,6 +102,9 @@ watch:{
   },
   switch2(){
       this.$store.commit('SetTestHover',this.switch2);
+  },
+  switch3(){
+    this.$store.commit('SetLogoBlack',this.switch3);
   },
 
 },

@@ -18,6 +18,7 @@ export default new Vuex.Store({
       ],
     HeaderColor:"#000000FF",
     HeaderTextColor:"#FFFFFFFF",
+    LogoBlack:true,
   },
   mutations: {
     SetTestHover(state,bool){
@@ -37,6 +38,10 @@ export default new Vuex.Store({
     },
     SetHeaderTextColor(state,payload){
       state.HeaderTextColor = payload;
+    },
+    SetLogoBlack(state,payload){
+      state.LogoBlack = payload;
+      console.log(state.LogoBlack);
     },
   },
   actions: {
