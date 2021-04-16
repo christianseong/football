@@ -8,7 +8,11 @@
 
 <v-container style="overflow:hidden;" class="mt-16">
 
-  <v-card elevation="5" id="ani1" class="my-16 pa-10 rounded-xl blue-grey lighten-4">
+  <v-card data-aos="flip-up"
+          data-aos-duration="1000"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center" 
+          elevation="5"  class="my-16 pa-10 rounded-xl blue-grey lighten-4">
     <v-row>
       <v-col cols="12">
         <h1 class="Font">올그라운드는???????</h1>
@@ -23,7 +27,7 @@
     </v-row>
   </v-card>
 
-  <v-card elevation="5" id="ani2" class="pa-10 rounded-xl blue-grey lighten-4">
+  <v-card data-aos="zoom-in-up" elevation="5" class="pa-10 rounded-xl blue-grey lighten-4">
     <v-row>
       <v-col cols="12" >
         <h1 class="Font">123<br> 치킨은 가마치<br></h1>
