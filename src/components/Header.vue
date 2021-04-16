@@ -7,7 +7,7 @@
     height="74"
     class="pa-0"
     @mouseover="hoveract(true)"
-    @mouseleave="hoveract(true)"
+    @mouseleave="hoveract(false)"
     >
     <v-container fluid>
         <HeaderText v-if="this.$vuetify.breakpoint.smAndDown===true" />
