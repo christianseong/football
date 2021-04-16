@@ -216,8 +216,12 @@ export default {
     SetBoarderLine(){
       for(var i=0; i<this.$store.state.Menulist.length; i++)
       {
-        if(this.$store.state.Menulist[i].title!='About')document.getElementsByClassName('tabs')[i].style.borderBottom = "0px solid white";
-        else document.getElementsByClassName('tabs')[i].style.borderBottom = "2px solid white";
+        if(this.$store.state.Menulist[i].title!='About'){
+          document.getElementsByClassName('tabs')[i].style.borderBottom = "0px solid white";
+        }
+        else{
+          document.getElementsByClassName('tabs')[i].style.borderBottom = "2px solid white";
+        } 
       }
     },
   },

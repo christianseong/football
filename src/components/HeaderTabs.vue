@@ -10,9 +10,9 @@
     <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
 
     <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
-        <v-tab v-for="i in menulist" :key="i.title" :to="i.to" class="tabs">
+        <div v-for="i in menulist" :key="i.title" class="tabs" ><v-tab :to="i.to">
         <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p><span class="borderspan"></span>
-        </v-tab>
+        </v-tab></div>
     </v-col>
 
     <v-spacer></v-spacer>
@@ -62,7 +62,7 @@ export default {
     opacity:1;
 }
 .borderspan{
-    bottom:-2px; left:0; width:0; height:1.8px;
+    bottom:-8px; left:0; width:0; height:1.8px;
     position:absolute;
     background:white;
     transition: all .2s;
