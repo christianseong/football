@@ -95,7 +95,7 @@ export default {
     min-width:90px;
 }
 .v-tab, .v-tab:hover {
-  width:100px;
+  width:100%;
   border-bottom: .5px solid rgba(255,255,255, .0);
 }
 </style>

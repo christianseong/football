@@ -67,7 +67,7 @@ export default {
     opacity:1;
 }
 .borderspan{
-    bottom:-8px; left:0; width:0; height:1.8px;
+    bottom:-6px; left:0; width:0; height:2px;
     position:absolute;
     background:white;
     transition: all .2s;
