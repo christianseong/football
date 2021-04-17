@@ -1,6 +1,23 @@
 <template>
+<v-container fluid class="mx-0 px-0">
+
+<v-row>
+  <v-col class="ma-0 pa-0" cols="12">
+      <v-img max-height="700" data-aos="fade-left" src="https://www.theyflysohigh.co.uk/communities/7/004/008/430/047//images/4622274325_980x414.jpg"></v-img>
+  </v-col>
+
 <v-container>
-  <h1>ㅇㅅㅇ</h1>
+  <v-col cols="6">
+    <v-card>
+      ㅇㅅㅇ
+    </v-card>
+  </v-col>
+</v-container>
+</v-row>
+
+
+
+<br v-for="i in 100" :key="i">
 </v-container>
 </template>
 

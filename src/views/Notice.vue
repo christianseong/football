@@ -1,7 +1,24 @@
 <template>
-<div>
-  <h1> 노티스 view~</h1>
-</div>
+<v-container fluid class="mx-0 px-0">
+
+<v-row>
+  <v-col class="ma-0 pa-0" cols="12">
+      <v-img max-height="700" data-aos="fade-left" src="https://www.historic-uk.com/wp-content/uploads/2017/05/history-of-rugby-football.jpg"></v-img>
+  </v-col>
+
+<v-container>
+  <v-col cols="6">
+    <v-card>
+      ㅇㅅㅇ
+    </v-card>
+  </v-col>
+</v-container>
+</v-row>
+
+
+
+<br v-for="i in 100" :key="i">
+</v-container>
 </template>
 
 <script>

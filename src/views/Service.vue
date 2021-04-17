@@ -1,19 +1,18 @@
 <template>
-<v-container fluid class="ma-0 pa-0">
+<v-container fluid class="mx-0 px-0">
 
 <v-row>
   <v-col class="ma-0 pa-0" cols="12">
-      <v-img max-height="800" data-aos="zoom-in" src="https://stillmedab.olympic.org/media/Images/OlympicOrg/News/2020/09/02/2020-02-09-antwerp-thumbnail.jpg">
-      <v-row style="height:100%;" class="align-end ma-0 pa-0">
-        <v-col class="ma-0 pa-0" cols="12">
-          <v-tabs centered background-color="" color=green > 
-          <v-tab class="mx-auto"><p class="tabtitle">올데이 풋볼</p></v-tab>
-          <v-tab class="mx-auto"><p class="tabtitle">올데이 스포츠몰</p></v-tab>
-          </v-tabs>
-          </v-col>
-        </v-row>
-      </v-img>
+      <v-img max-height="700" data-aos="fade-left" src="https://stillmedab.olympic.org/media/Images/OlympicOrg/News/2020/09/02/2020-02-09-antwerp-thumbnail.jpg"></v-img>
   </v-col>
+
+<v-container>
+  <v-col cols="6">
+    <v-card>
+      ㅇㅅㅇ
+    </v-card>
+  </v-col>
+</v-container>
 </v-row>
 
 
@@ -73,5 +72,16 @@ p{
 }
 .v-tab:hover .tabtitle{
   color:#4CAF50;
+}
+
+@media (max-width:600px){
+  .tabtitle{
+  font-size:1.5rem;
+  }
+}
+@media (max-width:400px){
+  .tabtitle{
+  font-size:1.3rem;
+  }
 }
 </style>
