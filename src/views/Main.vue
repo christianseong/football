@@ -69,15 +69,28 @@ components: {
     SetBoarderLine(){
       for(var i=0; i<this.$store.state.Menulist.length; i++)
       {
-        if(this.$store.state.Menulist[i].title!='Main')document.getElementsByClassName('tabs')[i].style.borderBottom = "";
-        else document.getElementsByClassName('tabs')[i].style.borderBottom = `2px solid ${this.$store.state.HeaderTextColor}`;
+        if(this.$store.state.Menulist[i].title!='Main'){
+          document.getElementsByClassName('borderspan')[i].style.width = "0";
+          document.getElementsByClassName('borderspan')[i].style.opacity = "0";
+        }
+        else{
+          document.getElementsByClassName('borderspan')[i].style.width = "100%";
+          document.getElementsByClassName('borderspan')[i].style.opacity = "1";
+        } 
       }
     },
   },
   watch:{
+    IsMobile(){
+      if(this.IsMobile==true) return; 
+      else this.SetBoarderLine();
+    },
   },
   computed:{
-  }
+    IsMobile(){
+      return this.$vuetify.breakpoint.smAndDown
+    },
+  },
 }
 </script>
 
@@ -94,6 +107,7 @@ components: {
     line-height: 4rem;
     letter-spacing: -.125rem;
     font-weight: 700;
+    white-space:pre;
 }
 .MainText::selection{
   background-color:chartreuse;
@@ -122,6 +136,7 @@ components: {
     line-height: 4rem;
     letter-spacing: -.125rem;
     font-weight: 700;
+    white-space:pre;
 }
 .MainText2::selection{
   background-color:green;

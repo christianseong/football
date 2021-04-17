@@ -57,7 +57,7 @@ export default {
             ],
 
             s2:[
-            {title:"HISTORY", to:'/business',},
+            {title:"HISTORY", to:'/service',},
             ],
             s3:[
             {title:"cc", to:'/contact',},
@@ -93,9 +93,5 @@ export default {
     font-size:1rem;
     letter-spacing:-.3px;
     min-width:90px;
-}
-.v-tab, .v-tab:hover {
-  width:100%;
-  border-bottom: .5px solid rgba(255,255,255, .0);
 }
 </style>

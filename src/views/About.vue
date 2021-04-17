@@ -217,10 +217,12 @@ export default {
       for(var i=0; i<this.$store.state.Menulist.length; i++)
       {
         if(this.$store.state.Menulist[i].title!='About'){
-          document.getElementsByClassName('tabs')[i].style.borderBottom = "";
+          document.getElementsByClassName('borderspan')[i].style.width = "0";
+          document.getElementsByClassName('borderspan')[i].style.opacity = "0";
         }
         else{
-          document.getElementsByClassName('tabs')[i].style.borderBottom = `2px solid ${this.$store.state.HeaderTextColor}`;
+          document.getElementsByClassName('borderspan')[i].style.width = "100%";
+          document.getElementsByClassName('borderspan')[i].style.opacity = "1";
         } 
       }
     },
@@ -230,6 +232,17 @@ export default {
     this.$store.commit('SetHeaderText','About');
     this.$store.commit('SetHover',false);
     if(this.$vuetify.breakpoint.smAndDown===false)this.SetBoarderLine();
+  },
+    watch:{
+    IsMobile(){
+      if(this.IsMobile==true) return; 
+      else this.SetBoarderLine();
+    },
+  },
+  computed:{
+    IsMobile(){
+      return this.$vuetify.breakpoint.smAndDown
+    },
   },
 }
 </script>

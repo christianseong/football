@@ -42,6 +42,7 @@ watch:{
   font-size: 1.3rem;
   letter-spacing: -.5px;
   font-weight: 100;
+  white-space:pre;
 }
 .textholderani{
     animation-name:headerani;

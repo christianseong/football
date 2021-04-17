@@ -4,18 +4,18 @@
 <v-row class="ma-0 pa-0">
 
     <v-col col="3" class="d-flex justify-start pa-0">
-        <v-card v-if="this.$vuetify.breakpoint.smAndDown===false" class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoWhite===true ? require('@/assets/logo_black_wid.png') : require('@/assets/logo_white_wid.png')" ></v-img></v-card>
-        <v-card v-if="this.$vuetify.breakpoint.smAndDown===true" class="transparent" elevation="0" height="50px" width="75px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoWhite===true ? require('@/assets/logo_black.png') : require('@/assets/logo_white.png') " ></v-img></v-card>
+        <v-card v-if="this.$vuetify.breakpoint.smAndDown===false" class="transparent d-flex" elevation="0" height="100%" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoWhite===true ? require('@/assets/logo_black_wid.png') : require('@/assets/logo_white_wid.png')" ></v-img></v-card>
+        <v-card v-if="this.$vuetify.breakpoint.smAndDown===true" class="transparent d-flex" elevation="0" height="100%" width="75px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain :src="LogoWhite===true ? require('@/assets/logo_black.png') : require('@/assets/logo_white.png') " ></v-img></v-card>
     </v-col>
 
     <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
 
-    <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
-        <div style v-for="i in menulist" :key="i.title" class="tabs" >
-            <v-tab :to="i.to">
-                <p style="white-space:pre;" v-bind:style="{color:HeaderTextColor}" class="ma-0 EngFont">{{i.title}}</p><span class="borderspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span>
+    <v-col cols="9" v-if="this.$vuetify.breakpoint.smAndDown===false">
+        <v-tabs hide-slider background-color="transparent" :color=HeaderTextColor>
+            <v-tab v-for="i in Menulist" :key="i.title" class="mx-auto tabs" :to="i.to">
+                <p style="white-space:pre;" v-bind:style="{color:HeaderTextColor}" class="ma-0 EngFont">{{i.title}}</p><span class="hoverspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span><span class="borderspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span>
             </v-tab>
-        </div>
+        </v-tabs>
     </v-col>
 
     <v-spacer></v-spacer>
@@ -34,13 +34,6 @@ export default {
     name: 'HeaderTabs',
     data(){
         return{
-            menulist:[
-            {title:"ABOUT", to:'/about',},
-            {title:"BUSINESS", to:'/business'},
-            {title:"CONTACT", to:'/contact'},
-            {title:"NOTICE", to:'/notice'},
-            {title:"APPLY", to:'/apply'},
-            ],
         }
     },
     methods:{
@@ -55,6 +48,9 @@ export default {
         LogoWhite(){
             return this.$store.state.LogoWhite;
         },
+        Menulist(){
+            return this.$store.state.Menulist;
+        },
     },
 }
 </script>
@@ -66,17 +62,21 @@ export default {
     letter-spacing:-.3px;
     font-size:1rem;
     min-width:90px;
-    /* color:white; */
 }
-.v-tab:hover .borderspan {
+.v-tab:hover .hoverspan {
     width:100%;
     opacity:1;
 }
-.borderspan{
-    bottom:-6px; left:0; width:0; height:2px;
+.hoverspan{
+    bottom:0px; left:0; width:0; height:2px;
     position:absolute;
-    /* background:white; */
-    transition: all .2s;
+    transition: all .5s;
+    z-index:2;
+    opacity:0;
+}
+.borderspan{
+    bottom:0px; left:0; width:0; height:2px;
+    position:absolute;
     z-index:2;
     opacity:0;
 }

@@ -11,7 +11,7 @@ export default new Vuex.Store({
     headertext:"",
     Menulist:[
       { title: 'About', icon: 'mdi-alpha-a', to:'/about'},
-      { title: 'Business', icon: 'mdi-alpha-b', to:'/business'},
+      { title: 'Service', icon: 'mdi-alpha-b', to:'/service'},
       { title: 'Contact', icon: 'mdi-alpha-c', to:'/contact'},
       { title: 'Notice', icon: 'mdi-alpha-n', to:'/notice'},
       { title: 'Apply', icon: 'mdi-alpha-a', to:'/apply'},
