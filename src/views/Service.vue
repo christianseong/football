@@ -56,7 +56,6 @@ export default {
   mounted(){
     this.$vuetify.goTo(0, {duration:300,offset:0,easing:'easeInOutCubic'});
     this.$store.commit('SetHeaderText','Service');
-    this.$store.commit('SetHover',false);
     if(this.$vuetify.breakpoint.smAndDown===false)this.SetBoarderLine();
   },
    methods:{

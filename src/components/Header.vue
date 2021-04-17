@@ -16,7 +16,7 @@
             <HeaderTabs/>
         </v-col>
         <v-fade-transition>
-        <v-col cols="12" class="py-0" v-show="hover" style="background-color:black; position:absolute; z-index:10; top:100%;">
+        <v-col cols="12" class="py-0" v-show="hover" :style="{backgroundColor:HeaderColor}" style="position:absolute; z-index:10; top:100%;">
             <HeaderDropMenu/>
         </v-col>
         </v-fade-transition>

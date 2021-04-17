@@ -13,7 +13,9 @@
     <v-col cols="9" v-if="this.$vuetify.breakpoint.smAndDown===false">
         <v-tabs hide-slider background-color="transparent" :color=HeaderTextColor>
             <v-tab v-for="i in Menulist" :key="i.title" class="mx-auto tabs" :to="i.to">
-                <p style="white-space:pre;" v-bind:style="{color:HeaderTextColor}" class="ma-0 EngFont">{{i.title}}</p><span class="hoverspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span><span class="borderspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span>
+                <p style="white-space:pre;" v-bind:style="{color:HeaderTextColor}" class="ma-0 EngFont">{{i.title}}</p>
+                <span class="hoverspan" v-bind:style="{backgroundColor:HeaderTextColor}">
+                </span><span class="borderspan" v-bind:style="{backgroundColor:HeaderTextColor}"></span>
             </v-tab>
         </v-tabs>
     </v-col>
