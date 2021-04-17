@@ -43,6 +43,8 @@ watch:{
   letter-spacing: -.5px;
   font-weight: 100;
   white-space:pre;
+  font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
 }
 .textholderani{
     animation-name:headerani;

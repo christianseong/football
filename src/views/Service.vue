@@ -1,35 +1,24 @@
 <template>
 <v-container fluid class="ma-0 pa-0">
-<v-sheet :color="this.$store.state.HeaderColor">
-  <v-carousel
-  :show-arrows="false" 
-  hide-delimiters
-  cycle
-  interval="700"
-  height="fit-content"
-   >
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-    >
-    <v-img height="200" cover :src="item.src"></v-img>
-    </v-carousel-item>
-  </v-carousel>
-</v-sheet>
 
-<v-container>
-  <v-card>
-    <p>ㅇㅅaㅇ</p>
-  </v-card>
-  <v-row>
-    <v-col>
-      <p>ㅇㅅㅇ</p>
-    </v-col>
-  </v-row>
-</v-container>
+<v-row>
+  <v-col class="ma-0 pa-0" cols="12">
+      <v-img max-height="800" data-aos="zoom-in" src="https://stillmedab.olympic.org/media/Images/OlympicOrg/News/2020/09/02/2020-02-09-antwerp-thumbnail.jpg">
+      <v-row style="height:100%;" class="align-end ma-0 pa-0">
+        <v-col class="ma-0 pa-0" cols="12">
+          <v-tabs centered background-color="" color=green > 
+          <v-tab class="mx-auto"><p class="tabtitle">올데이 풋볼</p></v-tab>
+          <v-tab class="mx-auto"><p class="tabtitle">올데이 스포츠몰</p></v-tab>
+          </v-tabs>
+          </v-col>
+        </v-row>
+      </v-img>
+  </v-col>
+</v-row>
 
 
-<br v-for="i in 50" :key=i>
+
+<br v-for="i in 100" :key="i">
 </v-container>
 </template>
 
@@ -37,20 +26,7 @@
 export default {
   data(){
     return{
-       items: [
-          {
-            src: 'https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022_960_720.jpg',
-          },
-          {
-            src: 'https://cdn.pixabay.com/photo/2015/11/04/20/59/milky-way-1023340_960_720.jpg',
-          },
-          {
-            src: 'http://v2.alldayfootball.net/img/banner/3138c195dc78141f46d31b82eef4adbc.jpg',
-          },
-          {
-            src: 'http://v2.alldayfootball.net/img/banner/141123ae14fc8466325872bc3dad3e0d.jpg',
-          },
-        ],
+
     }
   },
   mounted(){
@@ -90,5 +66,12 @@ export default {
 <style scoped>
 p{
   white-space:pre;
+}
+.tabtitle{
+  font-size:2rem;
+  font-family: 'Do Hyeon';
+}
+.v-tab:hover .tabtitle{
+  color:#4CAF50;
 }
 </style>

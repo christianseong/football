@@ -1,5 +1,5 @@
 <template>
-<v-container class="pa-0 ma-0 Header" fluid>
+<v-container class="pa-0 ma-0" fluid>
 <v-app-bar
     app
     :color="HeaderColor"
@@ -16,7 +16,7 @@
             <HeaderTabs/>
         </v-col>
         <v-fade-transition>
-        <v-col cols="12" class="py-0" v-show="hover" :style="{backgroundColor:HeaderColor}" style="position:absolute; z-index:10; top:100%;">
+        <v-col cols="12" class="py-0" v-show="hover" :style="{backgroundColor:HeaderColor}" style="position:absolute; z-index:10; top:100%; left:0;">
             <HeaderDropMenu/>
         </v-col>
         </v-fade-transition>
@@ -61,7 +61,5 @@ export default {
 </script>
 
 <style scoped>
-/deep/ .v-toolbar__content {
-  padding: 0px !important;
-}
+
 </style>

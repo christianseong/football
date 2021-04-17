@@ -1,7 +1,7 @@
 <template>
 <div>
-<v-card elevation="0"  class="overflow-y-auto" >
-      <v-img src="https://stillmedab.olympic.org/media/Images/OlympicOrg/News/2019/05/27/Amsterdam-1928-football/2019-05-27-Amsterdam-1928-football-featured.jpg"></v-img>
+<v-card data-aos="zoom-in" elevation="0"  class="overflow-y-auto" >
+      <v-img max-height="800" src="https://stillmedab.olympic.org/media/Images/OlympicOrg/News/2019/05/27/Amsterdam-1928-football/2019-05-27-Amsterdam-1928-football-featured.jpg"></v-img>
       <p style="position:absolute; z-index:1;" class="MainText textholderani">FALL SEVEN TIMES</p>
       <p style="position:absolute; z-index:2;" class="MainText2 textholderani2">STAND UP EIGHT.</p>
 </v-card>

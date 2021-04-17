@@ -278,4 +278,7 @@ export default {
   #welcomeWord {
     width: 750px;
   }
+    * {
+    font-family: 'Do Hyeon','Noto Sans KR';
+  }
 </style>

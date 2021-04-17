@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center" style="position:fixed; top:20%; left:0; z-index:100;">
+  <div class="text-center" style="position:fixed; top:20%; left:2%; z-index:100;">
     <v-menu
       offset-y
       dark
