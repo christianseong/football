@@ -40,7 +40,7 @@ watch:{
   z-index:1;
   overflow:hidden;
   color:white;
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   letter-spacing: -.5px;
   font-weight: 100;
   font-family: 'Do Hyeon', sans-serif;
@@ -52,11 +52,11 @@ watch:{
 }
 @keyframes headerani {
   0% {
-    top:70%;
+    top:50%;
     opacity:0;
   }
   100% {
-    top:60%;
+    top:16%;
     opacity:1;
   }
 }

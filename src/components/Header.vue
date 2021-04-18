@@ -2,7 +2,7 @@
 <v-container class="pa-0 ma-0 Header" fluid>
 <v-app-bar
     app
-    color="black"
+    color="rgb(0, 150, 0)"
     flat
     height="74"
     class="pa-0"
@@ -16,7 +16,7 @@
             <HeaderTabs/>
         </v-col>
         <v-fade-transition>
-        <v-col cols="12" class="py-0" v-show="hover" style="background-color:black; position:absolute; z-index:10; top:100%;">
+        <v-col cols="12" class="py-0" v-show="hover" style="background-color: rgb(0, 135, 0, .5); position:absolute; z-index:10; top:100%;">
             <HeaderDropMenu/>
         </v-col>
         </v-fade-transition>

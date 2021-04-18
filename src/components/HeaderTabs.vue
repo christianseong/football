@@ -4,15 +4,20 @@
 <v-row class="ma-0 pa-0">
 
     <v-col col="3" class="d-flex justify-center pa-0">
-        <v-card class="transparent" elevation="0" height="50px" width="150px" to="/"><v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/logo_white_wid.png"></v-img></v-card>
+        <v-card class="transparent" elevation="0" height="50px" width="150px" to="/"  v-if="this.$vuetify.breakpoint.smAndDown===false">
+            <v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/logo_white_wid.png" ></v-img>
+        </v-card>
+        <v-card class="transparent align-self-center" elevation="0" height="30px" width="150px" to="/"  v-if="this.$vuetify.breakpoint.smAndDown===true">
+            <v-img style="z-index:5;" class="align-self-center" height="100%" width="100%" contain src="@/assets/small_logo_white.png"></v-img>
+        </v-card>
     </v-col>
 
-    <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===false"></v-spacer>
+    <v-spacer v-if="this.$vuetify.breakpoint.smAndDown===true"></v-spacer>
 
     <v-col cols="6" class="d-flex justify-space-around" v-if="this.$vuetify.breakpoint.smAndDown===false">
-        <v-tab v-for="i in menulist" :key="i.title" :to="i.to">
-        <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p>
-        </v-tab>
+        <div v-for="i in menulist" :key="i.title" class="tabs" ><v-tab :to="i.to">
+        <p style="white-space:pre; " class="ma-0 EngFont">{{i.title}}</p><span class="borderspan"></span>
+        </v-tab></div>
     </v-col>
 
     <v-spacer></v-spacer>
@@ -57,7 +62,16 @@ export default {
     font-weight: 600;
     color:white;
 }
-.v-tab, .v-tab:hover {
-  width:100px;
+.v-tab:hover .borderspan {
+    width:100%;
+    opacity:1;
+}
+.borderspan{
+    bottom:-8px; left:0; width:0; height:1.8px;
+    position:absolute;
+    background:white;
+    transition: all .2s;
+    z-index:2;
+    opacity:0;
 }
 </style>
