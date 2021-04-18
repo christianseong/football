@@ -34,6 +34,12 @@ const routes = [
     name: 'Apply',
     component: () => import('../views/Apply.vue')
   },
+  {
+    path: '/mbti',
+    name: 'Mbti',
+    component: () => import('../views/Mbti.vue')
+  },
+  
 ]
 
 const router = new VueRouter({

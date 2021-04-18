@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center" style="position:fixed; top:20%; left:2%; z-index:100;">
+  <div class="text-center" style="position:fixed; top:10%; left:2%; z-index:100; opacity:0.5;">
     <v-menu
       offset-y
       dark
@@ -45,8 +45,12 @@
             v-model="switch3"
             ></v-switch>
             </v-list-item>
-          </v-col>
 
+            <v-list-item>
+              <v-btn to="/mbti">MBTI하러가기</v-btn>
+            </v-list-item>
+
+          </v-col>
           <v-col>
             <hr>
             <p class="black">헤더 색깔조정</p>
