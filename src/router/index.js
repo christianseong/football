@@ -39,6 +39,26 @@ const routes = [
     name: 'Mbti',
     component: () => import('../views/Mbti.vue')
   },
+  {
+    path: '/terms-service',
+    name: 'TermsService',
+    component: () => import('../components/TermsService.vue')
+  },
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: () => import('../components/PrivacyPolicy.vue')
+  },
+  {
+    path: '/youth-policy',
+    name: 'YouthPolicy',
+    component: () => import('../components/YouthPolicy.vue')
+  },
+  {
+    path: '/article-remove-policy',
+    name: 'ArticleRemovePolicy',
+    component: () => import('../components/ArticleRemovePolicy.vue')
+  },
   
 ]
 

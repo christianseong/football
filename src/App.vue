@@ -6,6 +6,7 @@
   <v-main>
     <router-view/>
   </v-main>
+  <Footer/>
 </v-app>
 </template>
 
@@ -14,6 +15,8 @@
 import Header from'@/components/Header.vue'
 import Test from'@/components/test.vue'
 import Drawer from'@/components/Drawer.vue'
+import Footer from './views/Footer.vue'
+
 export default {
   name: 'App',
 
@@ -21,7 +24,9 @@ export default {
     Header,
     Test,
     Drawer,
+    Footer
   },
+
 
   data: () => ({
     //
